@@ -11,30 +11,39 @@
     
 	<main class="main_container">
 
-		<div class="main_text">
-			<h1 class="main_header">Stay updated!</h1>
-			<p>Join 60,000+ product managers receiving monthly updates on:</p>
+		<div class="main_text_container">
+			<div>
+				<h1 class="header">Stay updated!</h1>
+				<p class="main_paragraph">Join 60,000+ product managers receiving monthly updates on:</p>
+			</div>
 
-			<img src="/img/icon-list.svg" alt="Check Icon">
-			<p>Product discovery and building what matters</p>
-			<img src="/img/icon-list.svg" alt="Check Icon">
-			<p>Measuring to ensure updates are a success</p>
-			<img src="/img/icon-list.svg" alt="Check Icon">
-			<p>And much more!</p>
+			<div class="bullets">
+				<img src="/img/icon-list.svg" alt="Check Icon">
+				<p>Product discovery and building what matters</p>
+				<img src="/img/icon-list.svg" alt="Check Icon">
+				<p>Measuring to ensure updates are a success</p>
+				<img src="/img/icon-list.svg" alt="Check Icon">
+				<p>And much more!</p>
+			</div>
 
-			<p>Email address</p>
-			<p>Valid email required</p>
-			<form>
-				<input type="email" placeholder="email@company.com" required>
-				<button type="submit">Subscribe to monthly newsletter</button>
-			</form>
+			<div class="label_error">
+				<p class="main_label">Email address</p>
+				<p class="main_error">Valid email required</p>
+			</div>
+
+			<div>
+				<form>
+					<input class="main_input" type="email" placeholder="email@company.com" required>
+					<button class="main_button" type="submit">Subscribe to monthly newsletter</button>
+				</form>
+			</div>
 		</div>
 
-		<div class="main_img">
+		<div class="main_img_container">
 			<picture>
 				<source media="(min-width: 601px)"  srcset="./img/illustration-sign-up-desktop.svg">
 				<source media="(max-width: 600px)"  srcset="./public/img/illustration-sign-up-mobile.svg">
-				<img src="./public/img/illustration-sign-up-mobile.svg" alt="Decorative image">
+				<img class="main_img" src="./public/img/illustration-sign-up-mobile.svg" alt="Decorative image">
 			</picture>
 		</div>
 		
@@ -42,7 +51,7 @@
 
 	<div class="attribution">
 		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-		Coded by <a href="#">Your Name Here</a>.
+		Coded by <a href="#">Arturo López</a>.
 	</div>
 
     <script type="module" src="/src/main.ts"></script>

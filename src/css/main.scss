@@ -1,0 +1,133 @@
+@use "reset";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/// Fonts
+$main-font: 'Roboto', sans-serif;
+$main-font-size: 1rem;
+$light-weight: 400;
+$heavy-weight: 700;
+
+// Colors
+$Tomato: hsl(4, 100%, 67%);
+$Buttons-Idle: hsl(234, 29%, 20%);
+$Background-Body: hsl(235, 18%, 26%);
+$Background-Containers: white;
+$Input: hsl(231, 7%, 60%);
+$Attribution: hsl(228, 45%, 70%);
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: $Background-Body;
+}
+
+.main_container {
+	display: flex;
+	width: 800px;
+	height: 550px;
+	background-color: $Background-Containers;
+	border-radius: 29px;
+	font-family: $main-font;
+	font-weight: 400;
+	overflow: hidden;
+}
+
+.main_text_container {
+	width: 60%;
+	padding: 5.15rem 3.5rem 0rem 3.5rem;
+	font-size: 0.86rem;
+	
+	.header {
+		font-size: 3rem;
+		font-weight: 700;
+		color: $Buttons-Idle;
+		margin-bottom: 1.3rem;
+	}
+
+	.main_paragraph {
+		line-height: 150%;
+	}
+
+	.bullets {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		row-gap: 0.7rem;
+		margin: 1.35rem 0rem 2.4rem 0rem;
+
+		img {
+			width: 5.65%;
+			margin-right: 0.85rem;
+		}
+	
+		p {
+			width: 89.35%;
+		}
+	}
+
+	.label_error{
+		display: flex;
+		justify-content: space-between;
+
+		.main_label {
+			font-size: 0.65rem;
+			font-weight: 700;
+		}
+	
+		.main_error {
+			font-size: 0.7rem;
+			font-weight: 700;
+			color: $Tomato;
+			visibility: hidden;
+		}
+	}
+
+	.main_input {
+		width: 100%;
+		padding: 1rem 1.25rem;
+		border: 1px solid $Input;
+		border-radius: 8px;
+		color: $Input;
+		margin: 0.55rem 0rem 1.2rem 0rem;
+
+		&::placeholder {
+			font-size: 0.865rem;
+			color: $Input;
+		}
+	}
+
+	.main_button {
+		background-color: $Buttons-Idle;
+		width: 100%;
+		padding: 1rem;
+		border-radius: 8px;
+		border: 1px solid $Buttons-Idle;
+		color: white;
+		font-weight: 700;
+	}
+}
+
+.main_img_container {
+	width: 52%;
+	text-align: center;
+			
+	.main_img {
+		width: 100%;
+		height: 100%;
+		padding: 3.2rem 1.3rem 1.2rem 0rem;
+	}
+}
+
+.attribution {
+	position: absolute;
+	bottom: 30px;
+	font-size: 11px;
+	text-align: center;
+	color: white;
+
+	a {
+		color: $Attribution;
+	}
+}
