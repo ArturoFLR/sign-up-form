@@ -3,9 +3,6 @@
 
 /// Fonts
 $main-font: 'Roboto', sans-serif;
-$main-font-size: 1rem;
-$light-weight: 400;
-$heavy-weight: 700;
 
 // Colors
 $Tomato: hsl(4, 100%, 67%);
@@ -23,27 +20,36 @@ body {
 	background-color: $Background-Body;
 }
 
+.visible {
+	display: block;
+}
+
+.hidden {
+	display: none;
+}
+
 .main_container {
 	display: flex;
-	width: 800px;
-	height: 550px;
+	width: 696px;
+	height: 481px;
 	background-color: $Background-Containers;
-	border-radius: 29px;
+	border-radius: 27px;
 	font-family: $main-font;
 	font-weight: 400;
 	overflow: hidden;
+	box-shadow: 5px 5px 15px 15px hsla(235, 32%, 15%, 0.551);
 }
 
 .main_text_container {
 	width: 60%;
-	padding: 5.15rem 3.5rem 0rem 3.5rem;
-	font-size: 0.86rem;
+	padding: 4.5rem 3rem 0rem 3rem;
+	font-size: 0.75rem;
 	
 	.header {
-		font-size: 3rem;
+		font-size: 2.62rem;
 		font-weight: 700;
 		color: $Buttons-Idle;
-		margin-bottom: 1.3rem;
+		margin-bottom: 1.15rem;
 	}
 
 	.main_paragraph {
@@ -54,12 +60,12 @@ body {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		row-gap: 0.7rem;
-		margin: 1.35rem 0rem 2.4rem 0rem;
+		row-gap: 0.6rem;
+		margin: 1.2rem 0rem 2.1rem 0rem;
 
 		img {
 			width: 5.65%;
-			margin-right: 0.85rem;
+			margin-right: 0.75rem;
 		}
 	
 		p {
@@ -71,41 +77,66 @@ body {
 		display: flex;
 		justify-content: space-between;
 
-		.main_label {
-			font-size: 0.65rem;
+		.label {
+			font-size: 0.57rem;
 			font-weight: 700;
 		}
 	
-		.main_error {
-			font-size: 0.7rem;
+		.error {
+			font-size: 0.6rem;
 			font-weight: 700;
 			color: $Tomato;
 			visibility: hidden;
 		}
 	}
 
-	.main_input {
+	.input {
 		width: 100%;
-		padding: 1rem 1.25rem;
+		padding: 0.79rem 1.1rem;
 		border: 1px solid $Input;
-		border-radius: 8px;
+		border-radius: 6px;
 		color: $Input;
-		margin: 0.55rem 0rem 1.2rem 0rem;
+		margin: 0.5rem 0rem 1.1rem 0rem;
 
 		&::placeholder {
-			font-size: 0.865rem;
+			font-size: 0.75rem;
+			font-family: $main-font;
 			color: $Input;
+		}
+
+		&:hover {
+			cursor: pointer;
+			border: 1px solid black;
+			color: black;
+		}
+
+		&:focus {
+			outline: none;
+			border: 1px solid black;
+			color: black;
 		}
 	}
 
-	.main_button {
+	.button {
 		background-color: $Buttons-Idle;
 		width: 100%;
-		padding: 1rem;
-		border-radius: 8px;
+		padding: 0.85rem;
+		border-radius: 6px;
 		border: 1px solid $Buttons-Idle;
 		color: white;
 		font-weight: 700;
+		font-size: 0.72rem;
+
+		&:hover {
+			background-image: linear-gradient(to right, rgb(240, 85, 121), rgb(250, 99, 53));
+			box-shadow: 1px 6px 20px rgba(250, 99, 53, 0.69);
+			cursor: pointer;
+		}
+
+		&:active {
+			transform: translate(1px, 2px);
+			box-shadow: 1px 6px 10px rgba(250, 99, 53, 0.69);
+		}
 	}
 }
 
@@ -116,7 +147,7 @@ body {
 	.main_img {
 		width: 100%;
 		height: 100%;
-		padding: 3.2rem 1.3rem 1.2rem 0rem;
+		padding: 1rem 1.1rem 1rem 0rem;
 	}
 }
 

@@ -9,14 +9,13 @@
   </head>
   <body>
     
-	<main class="main_container">
+	<main class="main_container visible">
 
 		<div class="main_text_container">
-			<div>
-				<h1 class="header">Stay updated!</h1>
-				<p class="main_paragraph">Join 60,000+ product managers receiving monthly updates on:</p>
-			</div>
-
+			
+			<h1 class="header">Stay updated!</h1>
+			<p class="main_paragraph">Join 60,000+ product managers receiving monthly updates on:</p>
+			
 			<div class="bullets">
 				<img src="/img/icon-list.svg" alt="Check Icon">
 				<p>Product discovery and building what matters</p>
@@ -27,16 +26,16 @@
 			</div>
 
 			<div class="label_error">
-				<p class="main_label">Email address</p>
-				<p class="main_error">Valid email required</p>
+				<p class="label">Email address</p>
+				<p class="error">Valid email required</p>
 			</div>
 
-			<div>
-				<form>
-					<input class="main_input" type="email" placeholder="email@company.com" required>
-					<button class="main_button" type="submit">Subscribe to monthly newsletter</button>
-				</form>
-			</div>
+			
+			<form novalidate>
+				<input class="input" type="email" placeholder="email@company.com" required>
+				<button class="button" type="submit">Subscribe to monthly newsletter</button>
+			</form>
+			
 		</div>
 
 		<div class="main_img_container">
@@ -48,6 +47,11 @@
 		</div>
 		
 	</main>
+
+	<div class="message hidden">
+
+		
+	</div>
 
 	<div class="attribution">
 		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
