@@ -18,15 +18,10 @@ body {
 	align-items: center;
 	min-height: 100vh;
 	background-color: $Background-Body;
+	font-family: $main-font;
 }
 
-.visible {
-	display: block;
-}
-
-.hidden {
-	display: none;
-}
+// Main Container
 
 .main_container {
 	display: flex;
@@ -34,7 +29,6 @@ body {
 	height: 481px;
 	background-color: $Background-Containers;
 	border-radius: 27px;
-	font-family: $main-font;
 	font-weight: 400;
 	overflow: hidden;
 	box-shadow: 5px 5px 15px 15px hsla(235, 32%, 15%, 0.551);
@@ -86,7 +80,6 @@ body {
 			font-size: 0.6rem;
 			font-weight: 700;
 			color: $Tomato;
-			visibility: hidden;
 		}
 	}
 
@@ -151,6 +144,62 @@ body {
 	}
 }
 
+// Message
+
+.message {
+	width: 378px;
+	height: 390px;
+	background-color: white;
+	padding: 2.2rem 3rem;
+	border-radius: 28px;
+	overflow: hidden;
+	box-shadow: 5px 5px 15px 15px hsla(235, 32%, 15%, 0.551);
+
+	img {
+		width: 48px;
+		margin-bottom: 1.75rem;
+	}
+
+	h1 {
+		font-size: 2.62rem;
+		font-weight: 700;
+		color: $Buttons-Idle;
+		margin-bottom: 1.10rem;
+	}
+
+	p {
+		line-height: 150%;
+		font-size: 0.75rem;
+		margin-bottom: 1.9rem;
+	}
+
+	span {
+		font-weight: 700;
+	}
+
+	button {
+		background-color: $Buttons-Idle;
+		width: 100%;
+		padding: 0.85rem;
+		border-radius: 6px;
+		border: 1px solid $Buttons-Idle;
+		color: white;
+		font-weight: 700;
+		font-size: 0.72rem;
+
+		&:hover {
+			background-image: linear-gradient(to right, rgb(240, 85, 121), rgb(250, 99, 53));
+			box-shadow: 1px 6px 20px rgba(250, 99, 53, 0.69);
+			cursor: pointer;
+		}
+
+		&:active {
+			transform: translate(1px, 2px);
+			box-shadow: 1px 6px 10px rgba(250, 99, 53, 0.69);
+		}
+	}
+}
+
 .attribution {
 	position: absolute;
 	bottom: 30px;
@@ -161,4 +210,16 @@ body {
 	a {
 		color: $Attribution;
 	}
+}
+
+.main_visible {
+	display: flex;
+}
+
+.message_visible {
+	display: block;
+}
+
+.hidden {
+	display: none;
 }

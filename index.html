@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./img/favicon-32x32.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="./src/css/main.scss">
-    <title>Sign-Up Form</title>
-  </head>
-  <body>
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="img/favicon-32x32.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="src/css/main.scss">
+	<title>Sign-Up Form</title>
+</head>
+<body>
     
-	<main class="main_container visible">
+	<main class="main_container main_visible" id="main_container">
 
 		<div class="main_text_container">
 			
@@ -17,22 +17,21 @@
 			<p class="main_paragraph">Join 60,000+ product managers receiving monthly updates on:</p>
 			
 			<div class="bullets">
-				<img src="/img/icon-list.svg" alt="Check Icon">
+				<img src="img/icon-list.svg" alt="">
 				<p>Product discovery and building what matters</p>
-				<img src="/img/icon-list.svg" alt="Check Icon">
+				<img src="img/icon-list.svg" alt="">
 				<p>Measuring to ensure updates are a success</p>
-				<img src="/img/icon-list.svg" alt="Check Icon">
+				<img src="img/icon-list.svg" alt="">
 				<p>And much more!</p>
 			</div>
 
 			<div class="label_error">
 				<p class="label">Email address</p>
-				<p class="error">Valid email required</p>
+				<p class="error hidden" id="error">Valid email required</p>
 			</div>
-
 			
-			<form novalidate>
-				<input class="input" type="email" placeholder="email@company.com" required>
+			<form novalidate id="form">
+				<input class="input" id="input" type="email" placeholder="email@company.com" required>
 				<button class="button" type="submit">Subscribe to monthly newsletter</button>
 			</form>
 			
@@ -40,24 +39,26 @@
 
 		<div class="main_img_container">
 			<picture>
-				<source media="(min-width: 601px)"  srcset="./img/illustration-sign-up-desktop.svg">
-				<source media="(max-width: 600px)"  srcset="./public/img/illustration-sign-up-mobile.svg">
-				<img class="main_img" src="./public/img/illustration-sign-up-mobile.svg" alt="Decorative image">
+				<source media="(min-width: 601px)"  srcset="img/illustration-sign-up-desktop.svg">
+				<source media="(max-width: 600px)"  srcset="img/illustration-sign-up-mobile.svg">
+				<img class="main_img" src="img/illustration-sign-up-mobile.svg" alt="Decorative image">
 			</picture>
 		</div>
 		
 	</main>
 
-	<div class="message hidden">
-
-		
+	<div class="message message_visible hidden" id="message">
+		<img src="img/icon-success.svg" alt="">
+		<h1>Thanks for subscribing!</h1>
+		<p>A confirmation email has been sent to <span id="message_usermail">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.</p>
+		<button type="button" id="message_button">Dismiss message</button>
 	</div>
 
 	<div class="attribution">
 		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
 		Coded by <a href="#">Arturo López</a>.
 	</div>
-
+		
     <script type="module" src="/src/main.ts"></script>
-  </body>
+</body>
 </html>
