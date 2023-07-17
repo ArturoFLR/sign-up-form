@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="./img/favicon-32x32.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<title>Sign-Up Form</title>
+  <script type="module" crossorigin src="/assets/index-7955b8ba.js"></script>
+  <link rel="stylesheet" href="/assets/index-beefea0d.css">
+</head>
+<body>
+    
+	<main class="main_container main_visible" id="main_container">
+
+		<div class="main_text_container">
+			
+			<h1 class="header">Stay updated!</h1>
+			<p class="main_paragraph">Join 60,000+ product managers receiving monthly updates on:</p>
+			
+			<div class="bullets">
+				<img src="/img/icon-list.svg" alt="">
+				<p>Product discovery and building what matters</p>
+				<img src="/img/icon-list.svg" alt="">
+				<p>Measuring to ensure updates are a success</p>
+				<img src="/img/icon-list.svg" alt="">
+				<p>And much more!</p>
+			</div>
+
+			<div class="label_error">
+				<p class="label">Email address</p>
+				<p class="error hidden" id="error">Valid email required</p>
+			</div>
+			
+			<form novalidate id="form">
+				<input class="input" id="input" type="email" placeholder="email@company.com" required>
+				<button class="button" type="submit">Subscribe to monthly newsletter</button>
+			</form>
+			
+		</div>
+
+		<div class="main_img_container">
+			<picture>
+				<source media="(min-width: 601px)"  srcset="./img/illustration-sign-up-desktop.svg">
+				<source media="(max-width: 600px)"  srcset="/assets/illustration-sign-up-mobile-228553d5.svg ">
+				<img class="main_img" src="/assets/illustration-sign-up-mobile-228553d5.svg" alt="Decorative image">
+			</picture>
+		</div>
+		
+	</main>
+
+	<div class="message message_visible hidden" id="message">
+		<img src="/img/icon-success.svg" alt="">
+		<h1>Thanks for subscribing!</h1>
+		<p>A confirmation email has been sent to <span id="message_usermail">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.</p>
+		<button type="button" id="message_button">Dismiss message</button>
+	</div>
+
+	<div class="attribution">
+		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+		Coded by <a href="#">Arturo López</a>.
+	</div>
+		
+    
+</body>
+</html>
