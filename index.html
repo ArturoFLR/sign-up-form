@@ -41,17 +41,21 @@
 			<picture>
 				<source media="(min-width: 601px)"  srcset="img/illustration-sign-up-desktop.svg">
 				<source media="(max-width: 600px)"  srcset="img/illustration-sign-up-mobile.svg">
-				<img class="main_img" src="img/illustration-sign-up-mobile.svg" alt="Decorative image">
+				<img class="main_img" src="img/illustration-sign-up-mobile.svg" alt="">
 			</picture>
 		</div>
 		
 	</main>
 
 	<div class="message message_visible hidden" id="message">
-		<img src="img/icon-success.svg" alt="">
-		<h1>Thanks for subscribing!</h1>
-		<p>A confirmation email has been sent to <span id="message_usermail">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.</p>
-		<button type="button" id="message_button">Dismiss message</button>
+		<div class="message_text">
+			<img src="img/icon-success.svg" alt="">
+			<h1>Thanks for subscribing!</h1>
+			<p>A confirmation email has been sent to <span id="message_usermail"></span>. Please open it and click the button inside to confirm your subscription.</p>
+		</div>
+		<div class="message_button">
+			<button type="button" id="message_button">Dismiss message</button>
+		</div>	
 	</div>
 
 	<div class="attribution">
